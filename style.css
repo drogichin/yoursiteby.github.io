@@ -15,7 +15,7 @@ body {
 }
 
 header {
-    height: 690px;
+    height: 50%;
     width: 100%;
     background-color: #d3d3d3;
     margin: 0px;
@@ -40,10 +40,16 @@ header {
     padding-left: 20px;
     font-size: 60px;
     color: #838383;
+    justify-content: flex-start;
+    width: 50%;
+}
+
+.head {
+    margin: 0;
 }
 .links {
     display: flex;
-    margin-left: 250px;
+    justify-content: flex-end; 
 }
 
 .link {
@@ -62,10 +68,7 @@ header {
 .skills {
     display: flex;
     align-items: center;
-    width: 1000px;
-    position: absolute;
-    left: 50%;
-    margin-left: -500px;
+    justify-content: center;
 }
 
 .title-skills {
@@ -132,21 +135,33 @@ section {
 }
 
 .footer {
-    height: 200px;
+    height: 50%;
     width: 100%;
     background-color: #d3d3d3;
 }
 
 .div-footer {
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .vk {
-    margin-left: 190px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .mailru {
-    margin-left: 650px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.foot-block {
+    display: block;
+    text-align: center;
 }
 
 .footer-title {
@@ -161,13 +176,6 @@ section {
     display: flex;
 }
 
-.vk-link {
-    margin-left: 30px;
-}
-
-.mailru-link {
-    margin-left: 370px;
-}
 
 .footer-link {
     color: #838383;
@@ -273,102 +281,32 @@ section {
     margin-left: 670px;
 }
 
-
-
-@media screen and (max-width : 1024px) {
-
-    .title-skills {
-        font-family: 'clickuper';
-        font-size: 58px;
-        color: #838383;
+@media screen and (max-width : 1200px) {
+    .header-title {
+        width: 40%;
     }
+}
 
-    .header-image {
-        width: 340px;
-        height: 100%;
+@media screen and (max-width : 1065px) {
+    .header-title {
+        width: 30%;
     }
-}    
-
-@media screen and (max-width : 987px) {
-    header {
-        height: 500px;
-        width: 100%;
-        background-color: #d3d3d3;
-        margin: 0px;
-    }
-
-    .title-skills {
-        font-family: 'clickuper';
-        font-size: 50px;
-        color: #838383;
-    }
-
-    .header-image {
-        width: 330px;
-        height: 100%;
-    }
-
-    .vk {
-        margin-left: 150px;
-    }
-    
-    .mailru {
-        margin-left: 430px;
-    }
-
-    .vk-link {
-        margin-left: 10px;
-    }
-
-    .footer-link {
-        color: #838383;
-        font-family: 'gardens';
-        font-size: 35px;
-        font-weight: 400;
-        margin-top: 0px;
-    }
-
-    .mail-img {
-        margin-left: 500px;
-        margin-top: 25px;
-    }
-
-    .textmail {
-        margin-left: 300px;
-    }
-
-    .mailru-link {
-        margin-left: 190px;
-    }
-}    
+}
 
 @media screen and (max-width : 1045px) {
     header {
-        height: 740px;
-        width: 100%;
-        background-color: #d3d3d3;
-        margin: 0px;
+        height: 50%;
     }
 
     .links {
         display: flex;
-        margin-left: 160px;
+        margin-left: 15%;
     }
 
     .link {
         text-decoration: none;
         margin-top: 5px;
         padding-left: 20px;
-    }
-
-    .skills {
-        display: flex;
-        align-items: center;
-        width: 1000px;
-        position: absolute;
-        left: 50%;
-        margin-left: -500px;
-
     }
 
     .title-link {
@@ -379,11 +317,8 @@ section {
     }
 
     .mailru {
-        margin-left: 470px;
+        
     }
-
-
-
     .price-price {
         font-family: 'gardens';
         color: #838383;
@@ -421,13 +356,85 @@ section {
     }
 }
 
-@media screen and (max-width : 600px) {
+@media screen and (max-width : 1024px) {
+
+    .title-skills {
+        font-family: 'clickuper';
+        font-size: 58px;
+        color: #838383;
+    }
+
+    .header-image {
+        width: 340px;
+        height: 100%;
+    }
+}    
+
+@media screen and (max-width : 987px) {
     header {
-        height: 900px;
-        width: 100%;
-        background-color: #d3d3d3;
+        height: 50%;
+    }
+
+    .title-skills {
+        font-family: 'clickuper';
+        font-size: 50px;
+        color: #838383;
+    }
+
+    .header-image {
+        width: 330px;
+        height: 100%;
+    }
+
+    .footer-link {
+        color: #838383;
+        font-family: 'gardens';
+        font-size: 35px;
+        font-weight: 400;
+        margin-top: 0px;
+    }
+
+    .mail-img {
+        margin-left: 500px;
+        margin-top: 25px;
+    }
+
+    .textmail {
+        margin-left: 300px;
+    }
+
+    .mailru-link {
+        margin-left: 190px;
+    }
+}    
+
+@media screen and (max-width : 800px) {
+    .head {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         margin: 0px;
     }
+    .header-title {
+        width: 0%;
+    }
+    .skills {
+        display: block;
+        text-align: center;
+    }
+    .section-image {
+        width: 250px;
+    }
+    .vk {
+        width: 100%;
+    }
+    .mailru {
+        width: 100% 
+    }
+}
+
+@media screen and (max-width : 600px) {
+    
     .header-contact {
         height: 390px;
         width: 100%;
@@ -455,14 +462,6 @@ section {
         font-size: 70px;
         color: #838383;
     }
-    .skills {
-        display: block;
-        width: 1000px;
-        position: absolute;
-        left: 50%;
-        margin-left: -500px;
-    }
-    
     .title-skills {
         font-family: 'clickuper';
         font-size: 20px;
